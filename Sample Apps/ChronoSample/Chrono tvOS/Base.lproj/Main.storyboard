@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11761" systemVersion="16C48b" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chrono_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Remind me next Tuesday" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WhA-DY-8CO">
+                                <rect key="frame" x="20" y="517" width="1880" height="46"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discovered Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82E-0U-tTe">
+                                <rect key="frame" x="20" y="408" width="1880" height="101"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="82E-0U-tTe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="52t-br-wWn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WhA-DY-8CO" secondAttribute="bottom" constant="517" id="7M0-C6-XAa"/>
+                            <constraint firstItem="WhA-DY-8CO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LDe-6k-QBH"/>
+                            <constraint firstItem="82E-0U-tTe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="S9P-Zh-m4T"/>
+                            <constraint firstItem="WhA-DY-8CO" firstAttribute="top" secondItem="82E-0U-tTe" secondAttribute="bottom" constant="8" symbolic="YES" id="Ud6-Wh-93L"/>
+                            <constraint firstItem="82E-0U-tTe" firstAttribute="leading" secondItem="WhA-DY-8CO" secondAttribute="leading" id="bgw-q7-JWt"/>
+                            <constraint firstItem="82E-0U-tTe" firstAttribute="trailing" secondItem="WhA-DY-8CO" secondAttribute="trailing" id="hNb-B4-yNg"/>
+                            <constraint firstItem="82E-0U-tTe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="408" id="ud5-Em-uaG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="discoveredDateLabel" destination="82E-0U-tTe" id="kDw-E4-vGR"/>
+                        <outlet property="inputField" destination="WhA-DY-8CO" id="3QL-cD-05B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

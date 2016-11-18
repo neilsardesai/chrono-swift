@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28E5C2401DDE6B540056DFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5C23F1DDE6B540056DFB2 /* AppDelegate.swift */; };
+		28E5C2421DDE6B540056DFB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5C2411DDE6B540056DFB2 /* ViewController.swift */; };
+		28E5C2451DDE6B540056DFB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C2431DDE6B540056DFB2 /* Main.storyboard */; };
+		28E5C2471DDE6B540056DFB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C2461DDE6B540056DFB2 /* Assets.xcassets */; };
+		28E5C2571DDE6F1E0056DFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5C2561DDE6F1E0056DFB2 /* AppDelegate.swift */; };
+		28E5C2591DDE6F1E0056DFB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5C2581DDE6F1E0056DFB2 /* ViewController.swift */; };
+		28E5C25B1DDE6F1E0056DFB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C25A1DDE6F1E0056DFB2 /* Assets.xcassets */; };
+		28E5C25E1DDE6F1E0056DFB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C25C1DDE6F1E0056DFB2 /* Main.storyboard */; };
+		28E5C2871DDE73A30056DFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5C2861DDE73A30056DFB2 /* AppDelegate.swift */; };
+		28E5C2891DDE73A30056DFB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5C2881DDE73A30056DFB2 /* ViewController.swift */; };
+		28E5C28C1DDE73A30056DFB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C28A1DDE73A30056DFB2 /* Main.storyboard */; };
+		28E5C28E1DDE73A30056DFB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C28D1DDE73A30056DFB2 /* Assets.xcassets */; };
+		28E5C2911DDE73A30056DFB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C28F1DDE73A30056DFB2 /* LaunchScreen.storyboard */; };
+		28E5C2961DDE73B10056DFB2 /* Chrono.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5C2681DDE73640056DFB2 /* Chrono.swift */; };
+		28E5C2971DDE73B10056DFB2 /* Chrono.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5C2681DDE73640056DFB2 /* Chrono.swift */; };
+		28E5C2981DDE73B20056DFB2 /* Chrono.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5C2681DDE73640056DFB2 /* Chrono.swift */; };
+		28E5C2991DDE73B40056DFB2 /* ChronoParsedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5C26C1DDE73640056DFB2 /* ChronoParsedResult.swift */; };
+		28E5C29A1DDE73B50056DFB2 /* ChronoParsedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5C26C1DDE73640056DFB2 /* ChronoParsedResult.swift */; };
+		28E5C29B1DDE73B50056DFB2 /* ChronoParsedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5C26C1DDE73640056DFB2 /* ChronoParsedResult.swift */; };
+		28E5C29C1DDE73B90056DFB2 /* chrono.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C26A1DDE73640056DFB2 /* chrono.min.js */; };
+		28E5C29D1DDE73B90056DFB2 /* chrono.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C26A1DDE73640056DFB2 /* chrono.min.js */; };
+		28E5C29E1DDE73BA0056DFB2 /* chrono.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C26A1DDE73640056DFB2 /* chrono.min.js */; };
+		28E5C29F1DDE73BC0056DFB2 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C26B1DDE73640056DFB2 /* LICENSE.txt */; };
+		28E5C2A01DDE73BC0056DFB2 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C26B1DDE73640056DFB2 /* LICENSE.txt */; };
+		28E5C2A11DDE73BD0056DFB2 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C26B1DDE73640056DFB2 /* LICENSE.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		28E5C23D1DDE6B540056DFB2 /* Chrono tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chrono tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E5C23F1DDE6B540056DFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		28E5C2411DDE6B540056DFB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28E5C2441DDE6B540056DFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28E5C2461DDE6B540056DFB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28E5C2481DDE6B540056DFB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28E5C2541DDE6F1E0056DFB2 /* Chrono macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chrono macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E5C2561DDE6F1E0056DFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		28E5C2581DDE6F1E0056DFB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28E5C25A1DDE6F1E0056DFB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28E5C25D1DDE6F1E0056DFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28E5C25F1DDE6F1E0056DFB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28E5C2681DDE73640056DFB2 /* Chrono.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chrono.swift; sourceTree = "<group>"; };
+		28E5C26A1DDE73640056DFB2 /* chrono.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = chrono.min.js; sourceTree = "<group>"; };
+		28E5C26B1DDE73640056DFB2 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		28E5C26C1DDE73640056DFB2 /* ChronoParsedResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChronoParsedResult.swift; sourceTree = "<group>"; };
+		28E5C2841DDE73A30056DFB2 /* Chrono iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chrono iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E5C2861DDE73A30056DFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		28E5C2881DDE73A30056DFB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28E5C28B1DDE73A30056DFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28E5C28D1DDE73A30056DFB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28E5C2901DDE73A30056DFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		28E5C2921DDE73A30056DFB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28E5C23A1DDE6B540056DFB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E5C2511DDE6F1E0056DFB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E5C2811DDE73A30056DFB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28E5C1E41DDE54770056DFB2 = {
+			isa = PBXGroup;
+			children = (
+				28E5C2671DDE73640056DFB2 /* Chrono */,
+				28E5C2851DDE73A30056DFB2 /* Chrono iOS */,
+				28E5C23E1DDE6B540056DFB2 /* Chrono tvOS */,
+				28E5C2551DDE6F1E0056DFB2 /* Chrono macOS */,
+				28E5C1EE1DDE54770056DFB2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28E5C1EE1DDE54770056DFB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28E5C23D1DDE6B540056DFB2 /* Chrono tvOS.app */,
+				28E5C2541DDE6F1E0056DFB2 /* Chrono macOS.app */,
+				28E5C2841DDE73A30056DFB2 /* Chrono iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28E5C23E1DDE6B540056DFB2 /* Chrono tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				28E5C23F1DDE6B540056DFB2 /* AppDelegate.swift */,
+				28E5C2411DDE6B540056DFB2 /* ViewController.swift */,
+				28E5C2431DDE6B540056DFB2 /* Main.storyboard */,
+				28E5C2461DDE6B540056DFB2 /* Assets.xcassets */,
+				28E5C2481DDE6B540056DFB2 /* Info.plist */,
+			);
+			path = "Chrono tvOS";
+			sourceTree = "<group>";
+		};
+		28E5C2551DDE6F1E0056DFB2 /* Chrono macOS */ = {
+			isa = PBXGroup;
+			children = (
+				28E5C2561DDE6F1E0056DFB2 /* AppDelegate.swift */,
+				28E5C2581DDE6F1E0056DFB2 /* ViewController.swift */,
+				28E5C25A1DDE6F1E0056DFB2 /* Assets.xcassets */,
+				28E5C25C1DDE6F1E0056DFB2 /* Main.storyboard */,
+				28E5C25F1DDE6F1E0056DFB2 /* Info.plist */,
+			);
+			path = "Chrono macOS";
+			sourceTree = "<group>";
+		};
+		28E5C2671DDE73640056DFB2 /* Chrono */ = {
+			isa = PBXGroup;
+			children = (
+				28E5C2681DDE73640056DFB2 /* Chrono.swift */,
+				28E5C2691DDE73640056DFB2 /* ChronoJS */,
+				28E5C26C1DDE73640056DFB2 /* ChronoParsedResult.swift */,
+			);
+			path = Chrono;
+			sourceTree = "<group>";
+		};
+		28E5C2691DDE73640056DFB2 /* ChronoJS */ = {
+			isa = PBXGroup;
+			children = (
+				28E5C26A1DDE73640056DFB2 /* chrono.min.js */,
+				28E5C26B1DDE73640056DFB2 /* LICENSE.txt */,
+			);
+			path = ChronoJS;
+			sourceTree = "<group>";
+		};
+		28E5C2851DDE73A30056DFB2 /* Chrono iOS */ = {
+			isa = PBXGroup;
+			children = (
+				28E5C2861DDE73A30056DFB2 /* AppDelegate.swift */,
+				28E5C2881DDE73A30056DFB2 /* ViewController.swift */,
+				28E5C28A1DDE73A30056DFB2 /* Main.storyboard */,
+				28E5C28D1DDE73A30056DFB2 /* Assets.xcassets */,
+				28E5C28F1DDE73A30056DFB2 /* LaunchScreen.storyboard */,
+				28E5C2921DDE73A30056DFB2 /* Info.plist */,
+			);
+			path = "Chrono iOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28E5C23C1DDE6B540056DFB2 /* Chrono tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28E5C2491DDE6B540056DFB2 /* Build configuration list for PBXNativeTarget "Chrono tvOS" */;
+			buildPhases = (
+				28E5C2391DDE6B540056DFB2 /* Sources */,
+				28E5C23A1DDE6B540056DFB2 /* Frameworks */,
+				28E5C23B1DDE6B540056DFB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chrono tvOS";
+			productName = "Chrono tvOS";
+			productReference = 28E5C23D1DDE6B540056DFB2 /* Chrono tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28E5C2531DDE6F1E0056DFB2 /* Chrono macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28E5C2601DDE6F1E0056DFB2 /* Build configuration list for PBXNativeTarget "Chrono macOS" */;
+			buildPhases = (
+				28E5C2501DDE6F1E0056DFB2 /* Sources */,
+				28E5C2511DDE6F1E0056DFB2 /* Frameworks */,
+				28E5C2521DDE6F1E0056DFB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chrono macOS";
+			productName = "Chrono macOS";
+			productReference = 28E5C2541DDE6F1E0056DFB2 /* Chrono macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28E5C2831DDE73A30056DFB2 /* Chrono iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28E5C2931DDE73A30056DFB2 /* Build configuration list for PBXNativeTarget "Chrono iOS" */;
+			buildPhases = (
+				28E5C2801DDE73A30056DFB2 /* Sources */,
+				28E5C2811DDE73A30056DFB2 /* Frameworks */,
+				28E5C2821DDE73A30056DFB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chrono iOS";
+			productName = "Chrono iOS";
+			productReference = 28E5C2841DDE73A30056DFB2 /* Chrono iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28E5C1E51DDE54770056DFB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Neil Sardesai";
+				TargetAttributes = {
+					28E5C23C1DDE6B540056DFB2 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = ZW9695993M;
+						ProvisioningStyle = Automatic;
+					};
+					28E5C2531DDE6F1E0056DFB2 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = ZW9695993M;
+						ProvisioningStyle = Automatic;
+					};
+					28E5C2831DDE73A30056DFB2 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = ZW9695993M;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 28E5C1E81DDE54770056DFB2 /* Build configuration list for PBXProject "ChronoSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28E5C1E41DDE54770056DFB2;
+			productRefGroup = 28E5C1EE1DDE54770056DFB2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28E5C2831DDE73A30056DFB2 /* Chrono iOS */,
+				28E5C23C1DDE6B540056DFB2 /* Chrono tvOS */,
+				28E5C2531DDE6F1E0056DFB2 /* Chrono macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28E5C23B1DDE6B540056DFB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E5C2A01DDE73BC0056DFB2 /* LICENSE.txt in Resources */,
+				28E5C2471DDE6B540056DFB2 /* Assets.xcassets in Resources */,
+				28E5C29D1DDE73B90056DFB2 /* chrono.min.js in Resources */,
+				28E5C2451DDE6B540056DFB2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E5C2521DDE6F1E0056DFB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E5C2A11DDE73BD0056DFB2 /* LICENSE.txt in Resources */,
+				28E5C25B1DDE6F1E0056DFB2 /* Assets.xcassets in Resources */,
+				28E5C29E1DDE73BA0056DFB2 /* chrono.min.js in Resources */,
+				28E5C25E1DDE6F1E0056DFB2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E5C2821DDE73A30056DFB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E5C2911DDE73A30056DFB2 /* LaunchScreen.storyboard in Resources */,
+				28E5C28E1DDE73A30056DFB2 /* Assets.xcassets in Resources */,
+				28E5C28C1DDE73A30056DFB2 /* Main.storyboard in Resources */,
+				28E5C29F1DDE73BC0056DFB2 /* LICENSE.txt in Resources */,
+				28E5C29C1DDE73B90056DFB2 /* chrono.min.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28E5C2391DDE6B540056DFB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E5C2421DDE6B540056DFB2 /* ViewController.swift in Sources */,
+				28E5C2401DDE6B540056DFB2 /* AppDelegate.swift in Sources */,
+				28E5C29A1DDE73B50056DFB2 /* ChronoParsedResult.swift in Sources */,
+				28E5C2971DDE73B10056DFB2 /* Chrono.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E5C2501DDE6F1E0056DFB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E5C2591DDE6F1E0056DFB2 /* ViewController.swift in Sources */,
+				28E5C2571DDE6F1E0056DFB2 /* AppDelegate.swift in Sources */,
+				28E5C29B1DDE73B50056DFB2 /* ChronoParsedResult.swift in Sources */,
+				28E5C2981DDE73B20056DFB2 /* Chrono.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E5C2801DDE73A30056DFB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E5C2891DDE73A30056DFB2 /* ViewController.swift in Sources */,
+				28E5C2871DDE73A30056DFB2 /* AppDelegate.swift in Sources */,
+				28E5C2991DDE73B40056DFB2 /* ChronoParsedResult.swift in Sources */,
+				28E5C2961DDE73B10056DFB2 /* Chrono.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		28E5C2431DDE6B540056DFB2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28E5C2441DDE6B540056DFB2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		28E5C25C1DDE6F1E0056DFB2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28E5C25D1DDE6F1E0056DFB2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		28E5C28A1DDE73A30056DFB2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28E5C28B1DDE73A30056DFB2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		28E5C28F1DDE73A30056DFB2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28E5C2901DDE73A30056DFB2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		28E5C1FD1DDE54770056DFB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		28E5C1FE1DDE54770056DFB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28E5C24A1DDE6B540056DFB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = ZW9695993M;
+				INFOPLIST_FILE = "Chrono tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NeilSardesai.Chrono-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Debug;
+		};
+		28E5C24B1DDE6B540056DFB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = ZW9695993M;
+				INFOPLIST_FILE = "Chrono tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NeilSardesai.Chrono-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Release;
+		};
+		28E5C2611DDE6F1E0056DFB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZW9695993M;
+				INFOPLIST_FILE = "Chrono macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NeilSardesai.Chrono-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		28E5C2621DDE6F1E0056DFB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZW9695993M;
+				INFOPLIST_FILE = "Chrono macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NeilSardesai.Chrono-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		28E5C2941DDE73A30056DFB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZW9695993M;
+				INFOPLIST_FILE = "Chrono iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NeilSardesai.Chrono-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		28E5C2951DDE73A30056DFB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZW9695993M;
+				INFOPLIST_FILE = "Chrono iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NeilSardesai.Chrono-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28E5C1E81DDE54770056DFB2 /* Build configuration list for PBXProject "ChronoSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28E5C1FD1DDE54770056DFB2 /* Debug */,
+				28E5C1FE1DDE54770056DFB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28E5C2491DDE6B540056DFB2 /* Build configuration list for PBXNativeTarget "Chrono tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28E5C24A1DDE6B540056DFB2 /* Debug */,
+				28E5C24B1DDE6B540056DFB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		28E5C2601DDE6F1E0056DFB2 /* Build configuration list for PBXNativeTarget "Chrono macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28E5C2611DDE6F1E0056DFB2 /* Debug */,
+				28E5C2621DDE6F1E0056DFB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		28E5C2931DDE73A30056DFB2 /* Build configuration list for PBXNativeTarget "Chrono iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28E5C2941DDE73A30056DFB2 /* Debug */,
+				28E5C2951DDE73A30056DFB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28E5C1E51DDE54770056DFB2 /* Project object */;
+}

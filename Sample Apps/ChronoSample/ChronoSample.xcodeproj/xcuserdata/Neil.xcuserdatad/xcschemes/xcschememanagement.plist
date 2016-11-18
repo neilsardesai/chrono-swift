@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Chrono iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>Chrono macOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Chrono tvOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>28E5C1EC1DDE54770056DFB2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28E5C23C1DDE6B540056DFB2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28E5C2531DDE6F1E0056DFB2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28E5C2831DDE73A30056DFB2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
