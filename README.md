@@ -1,6 +1,6 @@
 # chrono-swift
 
-chrono-swift is a Swift wrapper for [Wanasit Tanakitrungruang's excellent JavaScript natural language date parser](https://github.com/wanasit/chrono "chrono.js"). chrono-swift lets you use Wanasit's library for your iOS, macOS, or tvOS apps, all while working with native Swift and Foundation data types. No need to deal with any of JavaScript's silliness.
+chrono-swift is a Swift wrapper for [Wanasit Tanakitrungruang's excellent chrono.js natural language date parser](https://github.com/wanasit/chrono "chrono.js"). chrono-swift lets you use chrono.js for your iOS, macOS, or tvOS apps, all while working with native Swift and Foundation data types. No need to deal with any of JavaScript's silliness.
 
 chrono-swift, (referred to as "Chrono" from here onwards), extracts date information from natural language phrases like **"Remind me in 2 days"** or **"Meet me this Saturday from 3-4 PM"** and returns Swift `Date` or `DateInterval` values.
 
