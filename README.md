@@ -18,28 +18,32 @@ let chrono = Chrono.shared
 
 ### Extract Date
 
-To extract a date from a natural language phrase, simply pass in the phrase to `Chrono`'s `dateFrom(naturalLanguageString:)` method.
+To extract a date from a natural language phrase, simply pass in the phrase to `Chrono`'s `dateFrom(naturalLanguageString:)` method. Here, the reference date is assumed to be the current system date.
 
 ```swift
 let date = chrono.dateFrom(naturalLanguageString: "Remind me in 2 days")
 // If today is November 17th, 2016, `date` will be November 19th, 2016
 ```
 
+If you want to use a different date as the reference date, use `dateFrom(naturalLanguageString:referenceDate:)`
+
 ### Extract Date Interval
 
-To extract a date interval from a natural language phrase, pass in the phrase to `Chrono`'s `dateIntervalFrom(naturalLanguageString:)` method.
+To extract a date interval from a natural language phrase, pass in the phrase to `Chrono`'s `dateIntervalFrom(naturalLanguageString:)` method. Again, the reference date is assumed to be the current system date here.
 
 ```swift
 let dateInterval = chrono.dateIntervalFrom(naturalLanguageString: "Meet me this Saturday from 3-4 PM")
 // If today is November 17th, 2016, `dateInterval` will be November 19th, 2016 3:00 PM - November 19th, 2016 4:00 PM
 ```
 
+If you want to use a different date as the reference date, use `dateIntervalFrom(naturalLanguageString:referenceDate:)`
+
 ### Detailed Parsed Results
 
 You can also get more detailed parsed results using `Chrono`'s `parsedResultsFrom(naturalLanguageString:)` method.
 
 ```swift
-let result = chrono.parsedResultsFrom(naturalLanguageString: "I have an appointment tomorrow from 10 to 11 AM")
+let result = chrono.parsedResultsFrom(naturalLanguageString: "I have an appointment tomorrow from 10 to 11 AM", referenceDate: nil) // If referenceDate is nil, it is assumed to be the current system date.
 print(results)
 ```
 

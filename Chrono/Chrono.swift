@@ -9,8 +9,10 @@
 import Foundation
 import JavaScriptCore
 
-class Chrono {
+/// A singleton that contains methods for extracting date information from natural language phrases. Subclassing is not allowed.
+final class Chrono {
     
+    /// Use this property to get the shared singleton instance of `Chrono`
     static let shared = Chrono()
     private var context: JSContext
     
@@ -32,33 +34,101 @@ class Chrono {
     
     // MARK: Convenience Methods
     
+    /**
+     Attempts to extract a date from a given natural language phrase. The reference date is assumed to be the current system date. 
+     
+     Example: If the current system date is November 20th, 2016 9:41 AM CST, and the natural language phrase is "2 days ago", the return `Date` will be November 18th, 2016 9:41 AM CST
+     
+     - Parameter naturalLanguageString: The input natural language phrase
+     
+     - Returns: A `Date` extracted from the input `naturalLanguageString`. If a `Date` could not be found, returns `nil`.
+     */
     func dateFrom(naturalLanguageString: String) -> Date? {
-        let results = parsedResultsFrom(naturalLanguageString: naturalLanguageString)
+        let results = parsedResultsFrom(naturalLanguageString: naturalLanguageString, referenceDate: nil)
         guard let date = results.startDate else { return nil }
         return date
     }
     
+    /**
+     Attempts to extract a date interval from a given natural language phrase. The reference date is assumed to be the current system date.
+     
+     Example: If the current system date is November 20th, 2016 9:41 AM CST, and the natural language phrase is "tomorrow from 3-4 PM", the return `DateInterval` will be November 21th, 2016 3:00 PM CST - November 21th, 2016 4:00 PM CST
+     
+     - Parameter naturalLanguageString: The input natural language phrase
+     
+     - Returns: A `DateInterval` extracted from the input `naturalLanguageString`. If a `DateInterval` could not be found, returns `nil`.
+     */
     func dateIntervalFrom(naturalLanguageString: String) -> DateInterval? {
-        let results = parsedResultsFrom(naturalLanguageString: naturalLanguageString)
+        let results = parsedResultsFrom(naturalLanguageString: naturalLanguageString, referenceDate: nil)
+        guard let startDate = results.startDate, let endDate = results.endDate else { return nil }
+        return DateInterval(start: startDate, end: endDate)
+    }
+    
+    /**
+     Attempts to extract a date from a given natural language phrase. A reference date is required. If you want to use the current system date as the reference date, use `dateFrom(naturalLanguageString:)` instead.
+     
+     Example: If the reference date is October 18th, 2016 9:41 AM CST, and the natural language phrase is "2 days ago", the return `Date` will be October 16th, 2016 9:41 AM CST
+     
+     - Parameter naturalLanguageString: The input natural language phrase
+     - Parameter referenceDate: The reference date used to calculate the return `Date`
+     
+     - Returns: A `Date` extracted from the input `naturalLanguageString` and calculated based on the `referenceDate`. If a `Date` could not be found, returns `nil`.
+     */
+    func dateFrom(naturalLanguageString: String, referenceDate: Date) -> Date? {
+        let results = parsedResultsFrom(naturalLanguageString: naturalLanguageString, referenceDate: referenceDate)
+        guard let date = results.startDate else { return nil }
+        return date
+    }
+    
+    /**
+     Attempts to extract a date interval from a given natural language phrase. A reference date is required. If you want to use the current system date as the reference date, use `dateIntervalFrom(naturalLanguageString:)` instead.
+     
+     Example: If the reference date is October 18th, 2016 9:41 AM CST, and the natural language phrase is "tomorrow from 3-4 PM", the return `DateInterval` will be October 19th, 2016 3:00 PM - October 19th, 2016 4:00 PM.
+     
+     - Parameter naturalLanguageString: The input natural language phrase
+     - Parameter referenceDate: The reference date used to calculate the return `DateInterval`
+     
+     - Returns: A `DateInterval` extracted from the input `naturalLanguageString` and calculated based on the `referenceDate`. If a `DateInterval` could not be found, returns `nil`.
+     */
+    func dateIntervalFrom(naturalLanguageString: String, referenceDate: Date) -> DateInterval? {
+        let results = parsedResultsFrom(naturalLanguageString: naturalLanguageString, referenceDate: referenceDate)
         guard let startDate = results.startDate, let endDate = results.endDate else { return nil }
         return DateInterval(start: startDate, end: endDate)
     }
     
     // MARK: Detailed Parsed Results
     
-    func parsedResultsFrom(naturalLanguageString: String) -> ChronoParsedResult {
-        context.evaluateScript("var naturalLanguageString = '\(naturalLanguageString)'")
-        context.evaluateScript("var results = chrono.parse(naturalLanguageString)")
+    /**
+     Attempts to extract date information from a given natural language phrase and returns a `ChronoParsedResult` with detailed results about the extracted date information. You can optionally pass in a reference date for date calculations. If no reference date is passed in, the reference date is assumed to be the current system date.
+     
+     - Parameter naturalLanguageString: The input natural language phrase
+     - Parameter referenceDate: The reference date used to calculate date information. If you specify `nil` for this parameter, `referenceDate` is assumed to be the current system date.
+     
+     - Returns: A `ChronoParsedResult` with details about extracted date information
+     */
+    func parsedResultsFrom(naturalLanguageString: String, referenceDate: Date?) -> ChronoParsedResult {
+        context.evaluateScript("var naturalLanguageString = '\(naturalLanguageString)';")
+        
+        if let referenceDate = referenceDate {
+            // Get year, month, day from referenceDate
+            let dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: referenceDate)
+            context.evaluateScript("var referenceDate = new Date(\(dateComponents.year!),\(dateComponents.month!),\(dateComponents.day!));")
+            context.evaluateScript("var results = chrono.parse(naturalLanguageString, referenceDate);")
+        }
+        else {
+            // Reference date is automatically current date if referenceDate is nil
+            context.evaluateScript("var results = chrono.parse(naturalLanguageString);")
+        }
         
         // Position in natural language string where time phrase starts
-        let index = context.evaluateScript("results[0].index")
+        let index = context.evaluateScript("results[0].index;")
         var indexOfStartingCharacterOfTimePhrase: Int? = nil
         if index!.description != "undefined" {
             indexOfStartingCharacterOfTimePhrase = Int(index!.toInt32())
         }
         
         // Separate time phrase from rest of input string
-        let text = context.evaluateScript("results[0].text")
+        let text = context.evaluateScript("results[0].text;")
         var timePhrase: String? = nil
         var ignoredText: String? = nil
         if text!.description != "undefined" {
@@ -66,22 +136,22 @@ class Chrono {
             ignoredText = naturalLanguageString.replacingOccurrences(of: timePhrase!, with: "")
         }
         
-        // Reference date is current system date
-        let ref = context.evaluateScript("results[0].ref")
-        var referenceDate: Date? = nil
+        // Reference date used by Chrono
+        let ref = context.evaluateScript("results[0].ref;")
+        var referenceDateFromContext: Date? = nil
         if ref!.description != "undefined" {
-            referenceDate = ref!.toDate()
+            referenceDateFromContext = ref!.toDate()
         }
         
         // Date discovered in time phrase. In the case of a date range, this is the start date.
-        let start = context.evaluateScript("results[0].start.date()")
+        let start = context.evaluateScript("results[0].start.date();")
         var startDate: Date? = nil
         if start!.description != "undefined" {
             startDate = start!.toDate()
         }
         
         // In the case of a date range, this is the end date.
-        let end = context.evaluateScript("results[0].end.date()")
+        let end = context.evaluateScript("results[0].end.date();")
         var endDate: Date? = nil
         if end!.description != "undefined" {
             endDate = end!.toDate()
@@ -93,7 +163,7 @@ class Chrono {
             dateInterval = DateInterval(start: startDate, end: endDate)
         }
         
-        return ChronoParsedResult(inputString: naturalLanguageString, indexOfStartingCharacterOfTimePhrase: indexOfStartingCharacterOfTimePhrase, timePhrase: timePhrase, ignoredText: ignoredText, referenceDate: referenceDate, startDate: startDate, endDate: endDate, dateInterval: dateInterval)
+        return ChronoParsedResult(inputString: naturalLanguageString, indexOfStartingCharacterOfTimePhrase: indexOfStartingCharacterOfTimePhrase, timePhrase: timePhrase, ignoredText: ignoredText, referenceDate: referenceDateFromContext, startDate: startDate, endDate: endDate, dateInterval: dateInterval)
     }
     
     

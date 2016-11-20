@@ -8,15 +8,24 @@
 
 import Foundation
 
+/// A struct that contains details about a parsed result from a call to `Chrono`'s `parsedResultsFrom(naturalLanguageString:referenceDate:)` method. You should not create instances of `ChronoParsedResult` yourself.
 struct ChronoParsedResult {
     
+    /// The input natural language phrase
     private(set) var inputString: String?
+    /// If the input natural language phrase were converted to an `Array` of `Character`s, this would be the index of the first `Character` of the discovered time phrase
     private(set) var indexOfStartingCharacterOfTimePhrase: Int?
+    /// The discovered time phrase in the input natural language phrase
     private(set) var timePhrase: String?
+    /// Text that was not part of the time phrase and was ignored
     private(set) var ignoredText: String?
+    /// The reference date used for calculating `startDate`
     private(set) var referenceDate: Date?
+    /// The date discovered in the input natural language phrase. If the time phrase in the natural language phrase describes an interval between two `Date`s, this is the start date of that interval
     private(set) var startDate: Date?
+    /// If the time phrase in the input natural language phrase describes an interval between two `Date`s, this is the end date of that interval
     private(set) var endDate: Date?
+    /// If the time phrase in the input natural language phrase describes an interval between two `Date`s, this is that `DateInterval`
     private(set) var dateInterval: DateInterval?
     
     init(inputString: String?, indexOfStartingCharacterOfTimePhrase: Int?, timePhrase: String?, ignoredText: String?, referenceDate: Date?, startDate: Date?, endDate: Date?, dateInterval: DateInterval?) {
@@ -33,6 +42,7 @@ struct ChronoParsedResult {
     
 }
 
+// Overriding output of `print(ChronoParsedResult)` to make it more useful
 extension ChronoParsedResult: CustomStringConvertible {
     
     var description: String {
