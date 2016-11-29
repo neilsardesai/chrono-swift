@@ -107,7 +107,7 @@ final class Chrono {
      - Returns: A `ChronoParsedResult` with details about extracted date information
      */
     func parsedResultsFrom(naturalLanguageString: String, referenceDate: Date?) -> ChronoParsedResult {
-        context.evaluateScript("var naturalLanguageString = '\(naturalLanguageString)';")
+        context.setObject(naturalLanguageString, forKeyedSubscript: "naturalLanguageString" as NSString)        
         
         if let referenceDate = referenceDate {
             // Get year, month, day from referenceDate
@@ -133,8 +133,23 @@ final class Chrono {
         var ignoredText: String? = nil
         if text!.description != "undefined" {
             timePhrase = text!.toString()
-            ignoredText = naturalLanguageString.replacingOccurrences(of: timePhrase!, with: "")
-        }
+            
+            // Filter out on/in + (the) + timePhrase
+            let pattern = "(\\s*[[:punct:]]*\\s*)*(on|in)*(\\s*[[:punct:]]*\\s*)*(the)*(\\s*[[:punct:]]*\\s*)*\(timePhrase!)(\\s*[[:punct:]]*\\s*)*"
+            let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+            ignoredText = regex.stringByReplacingMatches(in: naturalLanguageString, options: [], range: NSRange(0..<naturalLanguageString.utf16.count), withTemplate: " ")
+            
+            // Remove spaces at beginning and end of string
+            if ignoredText?.characters.first == " " {
+                ignoredText?.characters.removeFirst()
+            }
+            if ignoredText?.characters.last == " " {
+                ignoredText?.characters.removeLast()
+            }
+            
+            // Filter out timePhrase if it still appears in ignoredText
+            ignoredText = ignoredText?.replacingOccurrences(of: timePhrase!, with: "")
+        }                
         
         // Reference date used by Chrono
         let ref = context.evaluateScript("results[0].ref;")
