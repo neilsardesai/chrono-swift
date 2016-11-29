@@ -134,21 +134,12 @@ final class Chrono {
         if text!.description != "undefined" {
             timePhrase = text!.toString()
             
-            // Filter out on/in + (the) + timePhrase
-            let pattern = "(\\s*[[:punct:]]*\\s*)*(on|in)*(\\s*[[:punct:]]*\\s*)*(the)*(\\s*[[:punct:]]*\\s*)*\(timePhrase!)(\\s*[[:punct:]]*\\s*)*"
-            let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
-            ignoredText = regex.stringByReplacingMatches(in: naturalLanguageString, options: [], range: NSRange(0..<naturalLanguageString.utf16.count), withTemplate: " ")
+            // Filter out (on/in) + (the) + timePhrase
+            let timePhrasePattern = "(?>\\s*[[:punct:]]*\\s*)*(on|in)*(?>\\s*[[:punct:]]*\\s*)*(the)*(?>\\s*[[:punct:]]*\\s*)*\(timePhrase!)(?>\\s*[[:punct:]]*\\s*)*"
+            let timePhraseRegex = try! NSRegularExpression(pattern: timePhrasePattern, options: .caseInsensitive)
+            ignoredText = timePhraseRegex.stringByReplacingMatches(in: naturalLanguageString, options: [], range: NSRange(0..<naturalLanguageString.utf16.count), withTemplate: " ")
             
-            // Remove spaces at beginning and end of string
-            if ignoredText?.characters.first == " " {
-                ignoredText?.characters.removeFirst()
-            }
-            if ignoredText?.characters.last == " " {
-                ignoredText?.characters.removeLast()
-            }
-            
-            // Filter out timePhrase if it still appears in ignoredText
-            ignoredText = ignoredText?.replacingOccurrences(of: timePhrase!, with: "")
+            ignoredText = ignoredText?.trimmingCharacters(in: .whitespacesAndNewlines)
         }                
         
         // Reference date used by Chrono
