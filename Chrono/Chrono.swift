@@ -111,8 +111,7 @@ final class Chrono {
         
         if let referenceDate = referenceDate {
             // Get year, month, day from referenceDate
-            let dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: referenceDate)
-            context.evaluateScript("var referenceDate = new Date(\(dateComponents.year!),\(dateComponents.month!),\(dateComponents.day!));")
+            context.setObject(referenceDate, forKeyedSubscript: "referenceDate" as NSString)
             context.evaluateScript("var results = chrono.parse(naturalLanguageString, referenceDate);")
         }
         else {
