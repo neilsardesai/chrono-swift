@@ -52,9 +52,11 @@ extension ChronoParsedResult: CustomStringConvertible {
         let ignoredTextDescription = self.ignoredText?.description ?? "nil"
         
         // Make the dates pretty
+        let locale = Locale(identifier: "en_US")
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .long
+        dateFormatter.locale = locale
         
         var referenceDateDescription = "nil"
         if let referenceDate = self.referenceDate {

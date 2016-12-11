@@ -107,12 +107,11 @@ final class Chrono {
      - Returns: A `ChronoParsedResult` with details about extracted date information
      */
     func parsedResultsFrom(naturalLanguageString: String, referenceDate: Date?) -> ChronoParsedResult {
-        context.evaluateScript("var naturalLanguageString = '\(naturalLanguageString)';")
+        context.setObject(naturalLanguageString, forKeyedSubscript: "naturalLanguageString" as NSString)        
         
         if let referenceDate = referenceDate {
             // Get year, month, day from referenceDate
-            let dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: referenceDate)
-            context.evaluateScript("var referenceDate = new Date(\(dateComponents.year!),\(dateComponents.month!),\(dateComponents.day!));")
+            context.setObject(referenceDate, forKeyedSubscript: "referenceDate" as NSString)
             context.evaluateScript("var results = chrono.parse(naturalLanguageString, referenceDate);")
         }
         else {
@@ -133,8 +132,15 @@ final class Chrono {
         var ignoredText: String? = nil
         if text!.description != "undefined" {
             timePhrase = text!.toString()
-            ignoredText = naturalLanguageString.replacingOccurrences(of: timePhrase!, with: "")
-        }
+            
+            // Filter out (on/in) + (the) + timePhrase            
+            let timePhrasePattern = "(?>\\s*[[:punct:]]*\\s*)*(\\bon|\\bin)*(?>\\s*[[:punct:]]*\\s*)*(\\bthe)*(?>\\s*[[:punct:]]*\\s*)*\(timePhrase!)(?>\\s*[[:punct:]]*\\s*)*"
+            let timePhraseRegex = try! NSRegularExpression(pattern: timePhrasePattern, options: .caseInsensitive)
+            ignoredText = timePhraseRegex.stringByReplacingMatches(in: naturalLanguageString, options: [], range: NSRange(0..<naturalLanguageString.utf16.count), withTemplate: " ")
+            
+            ignoredText = ignoredText?.trimmingCharacters(in: .whitespacesAndNewlines)
+            ignoredText = ignoredText?.trimmingCharacters(in: .punctuationCharacters)
+        }                
         
         // Reference date used by Chrono
         let ref = context.evaluateScript("results[0].ref;")
