@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280E9F221E200AD6007C43A9 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 280E9F211E200AD6007C43A9 /* LICENSE.txt */; };
 		28E5C2401DDE6B540056DFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5C23F1DDE6B540056DFB2 /* AppDelegate.swift */; };
 		28E5C2421DDE6B540056DFB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5C2411DDE6B540056DFB2 /* ViewController.swift */; };
 		28E5C2451DDE6B540056DFB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C2431DDE6B540056DFB2 /* Main.storyboard */; };
@@ -29,12 +30,10 @@
 		28E5C29C1DDE73B90056DFB2 /* chrono.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C26A1DDE73640056DFB2 /* chrono.min.js */; };
 		28E5C29D1DDE73B90056DFB2 /* chrono.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C26A1DDE73640056DFB2 /* chrono.min.js */; };
 		28E5C29E1DDE73BA0056DFB2 /* chrono.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C26A1DDE73640056DFB2 /* chrono.min.js */; };
-		28E5C29F1DDE73BC0056DFB2 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C26B1DDE73640056DFB2 /* LICENSE.txt */; };
-		28E5C2A01DDE73BC0056DFB2 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C26B1DDE73640056DFB2 /* LICENSE.txt */; };
-		28E5C2A11DDE73BD0056DFB2 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 28E5C26B1DDE73640056DFB2 /* LICENSE.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		280E9F211E200AD6007C43A9 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = Chrono/LICENSE.txt; sourceTree = SOURCE_ROOT; };
 		28E5C23D1DDE6B540056DFB2 /* Chrono tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chrono tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E5C23F1DDE6B540056DFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28E5C2411DDE6B540056DFB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +48,6 @@
 		28E5C25F1DDE6F1E0056DFB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28E5C2681DDE73640056DFB2 /* Chrono.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chrono.swift; sourceTree = "<group>"; };
 		28E5C26A1DDE73640056DFB2 /* chrono.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = chrono.min.js; sourceTree = "<group>"; };
-		28E5C26B1DDE73640056DFB2 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		28E5C26C1DDE73640056DFB2 /* ChronoParsedResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChronoParsedResult.swift; sourceTree = "<group>"; };
 		28E5C2841DDE73A30056DFB2 /* Chrono iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chrono iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E5C2861DDE73A30056DFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				28E5C26A1DDE73640056DFB2 /* chrono.min.js */,
-				28E5C26B1DDE73640056DFB2 /* LICENSE.txt */,
+				280E9F211E200AD6007C43A9 /* LICENSE.txt */,
 			);
 			path = ChronoJS;
 			sourceTree = "<group>";
@@ -268,7 +266,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28E5C2A01DDE73BC0056DFB2 /* LICENSE.txt in Resources */,
 				28E5C2471DDE6B540056DFB2 /* Assets.xcassets in Resources */,
 				28E5C29D1DDE73B90056DFB2 /* chrono.min.js in Resources */,
 				28E5C2451DDE6B540056DFB2 /* Main.storyboard in Resources */,
@@ -279,7 +276,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28E5C2A11DDE73BD0056DFB2 /* LICENSE.txt in Resources */,
 				28E5C25B1DDE6F1E0056DFB2 /* Assets.xcassets in Resources */,
 				28E5C29E1DDE73BA0056DFB2 /* chrono.min.js in Resources */,
 				28E5C25E1DDE6F1E0056DFB2 /* Main.storyboard in Resources */,
@@ -293,7 +289,7 @@
 				28E5C2911DDE73A30056DFB2 /* LaunchScreen.storyboard in Resources */,
 				28E5C28E1DDE73A30056DFB2 /* Assets.xcassets in Resources */,
 				28E5C28C1DDE73A30056DFB2 /* Main.storyboard in Resources */,
-				28E5C29F1DDE73BC0056DFB2 /* LICENSE.txt in Resources */,
+				280E9F221E200AD6007C43A9 /* LICENSE.txt in Resources */,
 				28E5C29C1DDE73B90056DFB2 /* chrono.min.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,6 +572,7 @@
 				28E5C24B1DDE6B540056DFB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28E5C2601DDE6F1E0056DFB2 /* Build configuration list for PBXNativeTarget "Chrono macOS" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +581,7 @@
 				28E5C2621DDE6F1E0056DFB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28E5C2931DDE73A30056DFB2 /* Build configuration list for PBXNativeTarget "Chrono iOS" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +590,7 @@
 				28E5C2951DDE73A30056DFB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

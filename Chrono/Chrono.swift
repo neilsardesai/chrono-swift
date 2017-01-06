@@ -134,12 +134,11 @@ final class Chrono {
             timePhrase = text!.toString()
             
             // Filter out (on/in) + (the) + timePhrase            
-            let timePhrasePattern = "(?>\\s*[[:punct:]]*\\s*)*(\\bon|\\bin)*(?>\\s*[[:punct:]]*\\s*)*(\\bthe)*(?>\\s*[[:punct:]]*\\s*)*\(timePhrase!)(?>\\s*[[:punct:]]*\\s*)*"
+            let timePhrasePattern = "(\\bon|\\bin)*(?>\\s*[[:punct:]]*\\s*)*(\\bthe)*(?>\\s*[[:punct:]]*\\s*)*\(timePhrase!)(?>\\s*[[:punct:]]*\\s*)*"
             let timePhraseRegex = try! NSRegularExpression(pattern: timePhrasePattern, options: .caseInsensitive)
             ignoredText = timePhraseRegex.stringByReplacingMatches(in: naturalLanguageString, options: [], range: NSRange(0..<naturalLanguageString.utf16.count), withTemplate: " ")
-            
+                                    
             ignoredText = ignoredText?.trimmingCharacters(in: .whitespacesAndNewlines)
-            ignoredText = ignoredText?.trimmingCharacters(in: .punctuationCharacters)
         }                
         
         // Reference date used by Chrono
