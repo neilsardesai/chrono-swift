@@ -121,15 +121,15 @@ final class Chrono {
         
         // Position in natural language string where time phrase starts
         let index = context.evaluateScript("results[0].index;")
-        var indexOfStartingCharacterOfTimePhrase: Int? = nil
+        var indexOfStartingCharacterOfTimePhrase: Int?
         if index!.description != "undefined" {
             indexOfStartingCharacterOfTimePhrase = Int(index!.toInt32())
         }
         
         // Separate time phrase from rest of input string
         let text = context.evaluateScript("results[0].text;")
-        var timePhrase: String? = nil
-        var ignoredText: String? = nil
+        var timePhrase: String?
+        var ignoredText: String?
         if text!.description != "undefined" {
             timePhrase = text!.toString()
             
@@ -143,27 +143,27 @@ final class Chrono {
         
         // Reference date used by Chrono
         let ref = context.evaluateScript("results[0].ref;")
-        var referenceDateFromContext: Date? = nil
+        var referenceDateFromContext: Date?
         if ref!.description != "undefined" {
             referenceDateFromContext = ref!.toDate()
         }
         
         // Date discovered in time phrase. In the case of a date range, this is the start date.
         let start = context.evaluateScript("results[0].start.date();")
-        var startDate: Date? = nil
+        var startDate: Date?
         if start!.description != "undefined" {
             startDate = start!.toDate()
         }
         
         // In the case of a date range, this is the end date.
         let end = context.evaluateScript("results[0].end.date();")
-        var endDate: Date? = nil
+        var endDate: Date?
         if end!.description != "undefined" {
             endDate = end!.toDate()
         }
         
         // Create date interval in the case of a date range
-        var dateInterval: DateInterval? = nil
+        var dateInterval: DateInterval?
         if let startDate = startDate, let endDate = endDate {
             dateInterval = DateInterval(start: startDate, end: endDate)
         }
