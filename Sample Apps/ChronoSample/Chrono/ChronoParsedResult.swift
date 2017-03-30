@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// A struct that contains details about a parsed result from a call to `Chrono`'s `parsedResultsFrom(naturalLanguageString:referenceDate:)` method. You should not create instances of `ChronoParsedResult` yourself.
+/// A struct that contains details about a parsed result from a call to `Chrono`’s `parsedResultsFrom(naturalLanguageString:referenceDate:)` method. You should not create instances of `ChronoParsedResult` yourself.
 struct ChronoParsedResult {
     
     /// The input natural language phrase

@@ -25,7 +25,7 @@ final class Chrono {
         let url = URL(fileURLWithPath: path!)
         var chronoJSSource = try! String(contentsOf: url, encoding: .utf8)
         
-        // Won't work without this
+        // Won’t work without this
         chronoJSSource = "var window = this;\n \(chronoJSSource)"
         
         // Evaluate chrono.min.js
@@ -37,7 +37,7 @@ final class Chrono {
     /**
      Attempts to extract a date from a given natural language phrase. The reference date is assumed to be the current system date. 
      
-     Example: If the current system date is November 20th, 2016 9:41 AM CST, and the natural language phrase is "2 days ago", the return `Date` will be November 18th, 2016 9:41 AM CST
+     Example: If the current system date is November 20th, 2016 9:41 AM CST, and the natural language phrase is “2 days ago”, the return `Date` will be November 18th, 2016 9:41 AM CST
      
      - Parameter naturalLanguageString: The input natural language phrase
      
@@ -52,7 +52,7 @@ final class Chrono {
     /**
      Attempts to extract a date interval from a given natural language phrase. The reference date is assumed to be the current system date.
      
-     Example: If the current system date is November 20th, 2016 9:41 AM CST, and the natural language phrase is "tomorrow from 3-4 PM", the return `DateInterval` will be November 21th, 2016 3:00 PM CST - November 21th, 2016 4:00 PM CST
+     Example: If the current system date is November 20th, 2016 9:41 AM CST, and the natural language phrase is “tomorrow from 3-4 PM”, the return `DateInterval` will be November 21th, 2016 3:00 PM CST - November 21th, 2016 4:00 PM CST
      
      - Parameter naturalLanguageString: The input natural language phrase
      
@@ -67,7 +67,7 @@ final class Chrono {
     /**
      Attempts to extract a date from a given natural language phrase. A reference date is required. If you want to use the current system date as the reference date, use `dateFrom(naturalLanguageString:)` instead.
      
-     Example: If the reference date is October 18th, 2016 9:41 AM CST, and the natural language phrase is "2 days ago", the return `Date` will be October 16th, 2016 9:41 AM CST
+     Example: If the reference date is October 18th, 2016 9:41 AM CST, and the natural language phrase is “2 days ago”, the return `Date` will be October 16th, 2016 9:41 AM CST
      
      - Parameter naturalLanguageString: The input natural language phrase
      - Parameter referenceDate: The reference date used to calculate the return `Date`
@@ -83,7 +83,7 @@ final class Chrono {
     /**
      Attempts to extract a date interval from a given natural language phrase. A reference date is required. If you want to use the current system date as the reference date, use `dateIntervalFrom(naturalLanguageString:)` instead.
      
-     Example: If the reference date is October 18th, 2016 9:41 AM CST, and the natural language phrase is "tomorrow from 3-4 PM", the return `DateInterval` will be October 19th, 2016 3:00 PM - October 19th, 2016 4:00 PM.
+     Example: If the reference date is October 18th, 2016 9:41 AM CST, and the natural language phrase is “tomorrow from 3-4 PM”, the return `DateInterval` will be October 19th, 2016 3:00 PM - October 19th, 2016 4:00 PM.
      
      - Parameter naturalLanguageString: The input natural language phrase
      - Parameter referenceDate: The reference date used to calculate the return `DateInterval`
