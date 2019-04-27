@@ -45,7 +45,7 @@ class ViewController: NSViewController {
 
 extension ViewController: NSTextFieldDelegate {
     
-    override func controlTextDidChange(_ obj: Notification) {
+    func controlTextDidChange(_ obj: Notification) {
         updateDiscoveredDateLabel()
     }
     

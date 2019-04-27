@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         inputField.addTarget(self, action: #selector(updateDiscoveredDateLabel), for: .editingChanged)
     }
     
-    func updateDiscoveredDateLabel() {
+    @objc func updateDiscoveredDateLabel() {
         let chrono = Chrono.shared
         let date = chrono.dateFrom(naturalLanguageString: inputField.text!)
         
